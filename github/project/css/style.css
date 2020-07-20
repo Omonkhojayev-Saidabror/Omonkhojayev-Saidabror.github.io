@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition-property: background-color, border-color, box-shadow, color,
+        opacity, text-decoration;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+}
+
+html,
+body {
+    /* background: rgb(30, 41, 53); */
+    background: url("https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    background-size: cover;
+}
+
+body {
+    font-size: 17px;
+    line-height: 1.4;
+}
+
+.big-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.big-content {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #689cd2;
+    font-family: Helvetica;
+    align-items: center;
+    height: 90px;
+}
+
+.header-section {
+    display: flex;
+    align-items: center;
+    margin-left: 240px;
+}
+
+.header-item {
+    padding: 10px 15px;
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+.header-item:hover {
+    background-color: #ff9900;
+    border-radius: 6px;
+}
+
+.headerlogo {
+    font-weight: bold;
+}
+
+.headerButton {
+    cursor: pointer;
+}
+
+@keyframes spinner {
+    100% {
+        transform: rotate(4400deg);
+    }
+}
+
+.spinner-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    margin-left: -240px;
+}
+
+.spinner {
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    background: url("../img/white1.png") center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform-origin: 50% 50%;
+    animation: spinner 195s 1 alternate-reverse linear;
+}
+
+.sideBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 630px;
+    width: 150px;
+    border-right: 1px solid #d7dbdd;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.986);
+}
+
+.sideBar-item {
+    cursor: pointer;
+    padding: 8px 10px;
+    font-size: 18px;
+}
+
+.sideBar a {
+    color: #689cd2;
+    font-weight: bold;
+}
+
+.sideBar-item:hover {
+    background-color: #eef3f5;
+    border-radius: 4px;
+}
+
+main {
+    display: flex;
+}
+
+.wrap span {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #cdab99;
+    background-color: rgba(23, 107, 233, 0.26);
+    color: #fafafa;
+}
+
+.wrap {
+    display: flex;
+    align-items: stretch;
+    width: 90%;
+    margin: auto;
+    flex-direction: column;
+}
+
+button {
+    border: none;
+    width: 30px;
+    background: transparent;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    outline: none;
+    opacity: 0.5;
+    transition: opacity 300ms ease-out;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+.slider {
+    display: flex;
+    flex-direction: row;
+}
+
+.scroller {
+    flex: 1;
+    overflow: hidden;
+}
+
+.items {
+    list-style-type: none;
+    white-space: nowrap;
+    transition: transform 1s ease-in-out;
+}
+
+.item {
+    padding: 30px 20px;
+    display: inline-block;
+    width: 100%;
+    height: 568px;
+    background-size: cover;
+    background-position: 50% 50%;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 750px) {
+    .gallery div {
+        margin: 0;
+    }
+
+    .gallery {
+        padding: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: 100%;
+    }
+}
+
+@media (min-width: 700px) {
+    .card {
+        max-width: 320px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+.footer {
+    display: flex;
+    flex-shrink: 0;
+    background: #689cd2;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    padding-top: 5px;
+}
+
+.footer-left {
+    display: flex;
+    background-color: #fafafa;
+    width: 390px;
+    padding: 20px;
+    border-right: 2px solid rgba(0, 0, 0, 0.055);
+    color: #666;
+}
+
+#copy-p-left {
+    font-weight: bold;
+    color: rgb(65, 62, 62);
+    font-size: 18px;
+    line-height: 2.5;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+}
+
+.all-rights {
+    display: flex;
+    padding: 25px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+    flex-direction: column;
+    color: #666;
+}
+
+.all-rights p {
+    padding: 10px;
+}
+
+.social-buttons {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+    /* background-color: blueviolet; */
+}
+
+#back {
+    text-align: center;
+    color: #666;
+    margin-top: 20px;
+}
+
+.social-buttons {
+    display: flex;
+}
+
+.social a {
+    text-align: center;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15), inset 0 0 50px rgba(0, 0, 0, 0.1);
+    border-radius: 24px;
+    margin: 0 10px 10px 0;
+    padding: 6px;
+    color: rgb(170, 161, 161);
+    font-size: 25px;
+}
+
+.github a:hover {
+    background: #191919;
+    color: #fff;
+}
+
+.youtube a:hover {
+    background: #ff0800;
+    color: #fff;
+}
+
+.google-pluse a:hover {
+    background: #ff9102;
+    color: #fff;
+}
+
+.twitter a:hover {
+    background: #00acee;
+    color: #fff;
+}
+
+.instagram a:hover {
+    background: #f70606;
+    color: #fff;
+}
+
+.facebook a:hover {
+    background: #3b5998;
+    color: #fff;
+}
+
+.skype a:hover {
+    background: #00aff0;
+    color: #fff;
+}
+
+.vk a:hover {
+    background: #5d84ae;
+    color: #fff;
+}
+
+.odnoklassniki a:hover {
+    background: #f93;
+    color: #fff;
+}
+
+.pinterest a:hover {
+    background: #c8232c;
+    color: #fff;
+}
+
+.linkedin a:hover {
+    background: #0e76a8;
+    color: #fff;
+}
+
+.telegram a:hover {
+    background: #249bd7;
+    color: #fff;
+}
+
+.tumblr a:hover {
+    background: #34526f;
+    color: #fff;
+}
+
+.windows a:hover {
+    background: #125acd;
+    color: #fff;
+}
+
+.whatsapp a:hover {
+    background: #50b154;
+    color: #fff;
+}
+
+.weibo a:hover {
+    background: #d52b2b;
+    color: #fff;
+}
+
+.dropbox a:hover {
+    background: #1087dd;
+    color: #fff;
+}
